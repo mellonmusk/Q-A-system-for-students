@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="../../css/pages/auth/register.css">
+</head>
+<body>
+    <header class="header"> 
+        <span>질문 게시판</span>
+    </header>
+
+    <div class="main">
+        <h1 class="login">회원가입</h1>
+
+        <div class="picture">
+            <label for="picture-upload">프로필 사진</label>
+            <p class="helper-text" id="picture-error"></p>
+            <div class="profile-container">
+                <input type="file" id="picture-upload" accept="image/*" hidden />
+                <div class="profile-circle" id="profile-preview" onclick="document.getElementById('picture-upload').click()">
+                    <span>+</span>
+                </div>
+            </div>
+        </div> 
+
+        <div class="input-group">
+            <label for="email">이메일</label>
+            <input type="text" id="email" placeholder="이메일을 입력하세요">
+            <p class="helper-text" id="email-error"></p>
+        </div>
+
+        <div class="input-group">
+            <label for="password">비밀번호</label>
+            <input type="text" id="password" placeholder="비밀번호를 입력하세요">
+            <p class="helper-text" id="password-error"></p>
+        </div>
+
+        <div class="input-group">
+            <label for="password-check">비밀번호 확인</label>
+            <input type="text" id="password-check" placeholder="비밀번호를 한 번 더 입력하세요">
+            <p class="helper-text" id="password-check-error"></p>
+        </div>
+
+        <div class="input-group">
+            <label for="email">닉네임</label>
+            <input type="text" id="nickname" placeholder="닉네임을 입력하세요">
+            <p class="helper-text" id="nickname-error"></p>
+        </div>
+
+        <button type="button" id="register-btn" disabled>회원가입</button>
+
+        <a href="login.html" class="login">로그인하러 가기</a>
+    </div>
+
+    <script type="module" src="../../js/pages/auth/register.js"></script>
+</body>
+</html>

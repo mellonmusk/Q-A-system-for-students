@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시판</title>
+    <link rel="stylesheet" href="../../css/pages/posts/list.css" />
+    <script src="/js/pages/posts/list.js" type="module"></script>
+  </head>
+  <body>
+    <header class="header"> 
+      <span>질문 게시판</span>
+      <div class="profile-container">
+          <img alt="사용자 프로필" id="profile-img" />
+          <ul class="dropdown-menu" id="dropdown-menu">
+            <li><a href="../users/profile.html" class="edit-profile">회원정보 수정</a></li>
+            <li><a href="../users/password.html" class="edit-pw">비밀번호 수정</a></li>
+            <li class="logout">로그아웃</li>
+          </ul>
+      </div>
+  </header>
+
+    <div class="content">
+      <p class="hello">
+        <h3><strong>익명 질문 게시판</strong></h3>
+        수업 중 생긴 질문을 여기에 작성하세요. </br>
+        교수님과 조교님의 답변을 받을 수 있습니다.
+      </p>
+
+      <button type="button" id="create-btn">게시글 작성</button>
+
+      <div id="post-list"></div>
+    </div>
+  </body>
+</html>

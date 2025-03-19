@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시글 상세조회</title>
+
+    <link rel="stylesheet" href="../../css/pages/posts/detail.css">
+    <script type="module" defer src=" /js/pages/posts/detail.js""></script> 
+</head>
+<body>
+    <main class="post-container">
+        <h2 class="post-title"></h2>
+        <div class="post-meta">
+            <span class="post-author"></span>
+            <span class="post-date"></span>
+        </div>
+
+        <div class="post-actions">
+            <button class="edit-btn" onclick="editPost()">수정</button>
+            <button class="delete-btn" onclick="confirmDelete()">삭제</button>
+        </div>
+
+        <div class="post-content">
+            <img src="" alt="post-image" class="figure"/>
+            <p class="text"></p>
+        </div>
+
+        <div class="post-stats">
+            <div class="stat-item" id="like-count"></div>
+            <div class="stat-item" id="view-count"></div>
+            <div class="stat-item" id="comment-count"></div>
+        </div>
+
+        <div class="comment-section">
+            <textarea class="comment-input" placeholder="댓글을 남겨주세요!" oninput="toggleCommentButton()"></textarea>
+            <button class="comment-submit" disabled>댓글 등록</button>
+        </div>
+
+        
+        <ul class="comment-list">
+            <li class="comment-item">
+            </li>
+        </ul>
+ 
+    </main>
+
+    <div class="modal" id="delete-modal">
+        <div class="modal-content">
+            <p><strong>게시글을 삭제하시겠습니까?</strong>
+            </br></br>삭제한 내용은 복구할 수 없습니다.
+            </p>
+
+            <div class="modal-buttons">
+            </br>
+                <button onclick="removePost()" class="modal-btn">확인</button>
+                <button onclick="closeModal()" class="modal-btn">취소</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

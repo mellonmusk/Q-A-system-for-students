@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시글 상세조회</title>
+    <link rel="stylesheet" href="../../css/pages/posts/edit.css">
+    <script type="module" defer src=" /js/pages/posts/edit.js"></script> 
+</head>
+<body> 
+    <div class="main">
+        <h2 class="text">게시글 수정</h2>
+        <div class="input-group">
+            <label for="title">제목*</label>
+            <input type="text" id="title" />
+            <p class="helper-text" id="title-error"></p>
+        </div>
+        <div class="input-group">
+            <label for="post-content">내용*</label>
+            <textarea class="content" id="post-content"></textarea>
+            <p class="helper-text" id="content-error"></p>
+        </div>
+        <div class="input-group">
+            <label for="picture-upload">이미지</label>
+            <input type="file" id="picture-upload" accept="image/*"/>
+        </div>
+    </div>
+    <button type="button" id="update-btn">
+        수정하기
+    </button> 
+</body>
+</html>
